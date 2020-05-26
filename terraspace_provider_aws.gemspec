@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "aws-sdk-dynamodb"
   spec.add_dependency "aws-sdk-s3"
   spec.add_dependency "aws_data"
   spec.add_dependency "memoist"

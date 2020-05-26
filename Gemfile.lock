@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     terraspace_provider_aws (0.0.0)
+      aws-sdk-dynamodb
       aws-sdk-s3
       aws_data
       memoist
@@ -36,6 +37,9 @@ GEM
       aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
+    aws-sdk-dynamodb (1.47.0)
+      aws-sdk-core (~> 3, >= 3.71.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-kms (1.31.0)
       aws-sdk-core (~> 3, >= 3.71.0)
       aws-sigv4 (~> 1.1)
