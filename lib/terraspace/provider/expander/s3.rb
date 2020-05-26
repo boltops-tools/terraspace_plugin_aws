@@ -1,6 +1,6 @@
 require "aws_data"
 
-class Terraspace::Compiler::Expander
+module Terraspace::Provider::Expander
   class S3
     include Interface
     delegate :account, :region, to: :aws_data

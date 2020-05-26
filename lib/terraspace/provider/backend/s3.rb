@@ -1,4 +1,4 @@
-class Terraspace::Auto::Backend
+module Terraspace::Provider::Backend
   class S3
     include Interface
     include Terraspace::Provider::Aws::Clients
