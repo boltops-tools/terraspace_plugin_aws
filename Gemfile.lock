@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    terraspace_provider_aws (0.0.0)
+    terraspace-provider-aws (0.0.0)
       aws-sdk-s3
       aws_data
       memoist
@@ -94,7 +94,7 @@ DEPENDENCIES
   rake (~> 12.0)
   rspec (~> 3.0)
   terraspace!
-  terraspace_provider_aws!
+  terraspace-provider-aws!
 
 BUNDLED WITH
    2.1.4
