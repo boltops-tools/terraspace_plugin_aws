@@ -11,3 +11,5 @@ TerraspaceProviderAws::Autoloader.setup
 module TerraspaceProviderAws
   class Error < StandardError; end
 end
+
+Terraspace::Provider.register("s3", "aws")
