@@ -13,9 +13,7 @@ module Terraspace::Provider::Aws
       def setup
         loader = Zeitwerk::Loader.new
         loader.inflector = Inflector.new
-        loader.log!
         lib = File.expand_path("../../../", __dir__)
-        puts "lib #{lib}"
         loader.push_dir(lib)
         loader.setup
       end

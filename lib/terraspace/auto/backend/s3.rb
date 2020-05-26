@@ -1,5 +1,6 @@
 class Terraspace::Auto::Backend
-  class S3 < Base
+  class S3
+    include Interface
     include Terraspace::Provider::Aws::Clients
 
     def create
@@ -8,10 +9,12 @@ class Terraspace::Auto::Backend
         puts "ERROR: no bucket value provided in your terraform backend config".color(:red)
         exit 1
       end
-      return if exist?(bucket)
-
-      puts "Creating bucket: #{bucket}"
-      s3.create_bucket(bucket: bucket)
+      if exist?(bucket)
+        puts "Bucket already exist: #{bucket}"
+      else
+        puts "Creating bucket: #{bucket}"
+        s3.create_bucket(bucket: bucket)
+      end
     end
 
     def exist?(name)
