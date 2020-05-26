@@ -1,7 +1,4 @@
-resource("aws_vpc", "vpc",
-  cidr_block: var.cidr_block,
-
-  tags: {
-    Name: var.name,
-  }
+resource("aws_s3_bucket", "this",
+  bucket: var.bucket, # If omitted, Terraform will assign a random, unique name.
+  acl:    var.acl,
 )

@@ -1,7 +1,9 @@
-resource("aws_vpc", "vpc",
-  cidr_block: var.cidr_block,
+resource("random_pet", "bucket",
+  length: 2
+)
 
-  tags: {
-    Name: var.name
-  }
+module!("bucket",
+  source: "../../modules/example",
+  bucket: "bucket-${random_pet.bucket.id}",
+  acl:    var.acl,
 )

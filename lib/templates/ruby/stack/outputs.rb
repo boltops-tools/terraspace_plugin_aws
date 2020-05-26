@@ -1,4 +1,4 @@
-output("vpc_arn",
-  description: "VPC ARN",
-  value:       "${aws_vpc.vpc.arn}",
+output("bucket_name",
+  description: "Bucket name",
+  value:       "${module.bucket.name}",
 )

@@ -1,9 +1,11 @@
-variable("cidr_block",
-  default:     "10.80.0.0/16",
-  description: "cidr block",
+variable("bucket",
+  description: "The name of the bucket. If omitted, Terraform will assign a random, unique name.", # IE: terraform-2020052606510241590000000
+  type:        "string",
+  default:     nil,
 )
 
-variable("name",
-  default:     "demo-vpc",
-  description: "cidr block",
+variable("acl",
+  description: "The canned ACL to apply. Defaults to 'private'.",
+  type:         "string",
+  default:      "private",
 )
