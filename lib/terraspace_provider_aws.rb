@@ -4,10 +4,10 @@ $:.unshift(lib)
 require "memoist"
 require "terraspace" # for base classes
 
-require "terraspace_provider/version"
-require "terraspace_provider/autoloader"
-TerraspaceProvider::Autoloader.setup
+require "terraspace_provider_aws/version"
+require "terraspace_provider_aws/autoloader"
+TerraspaceProviderAws::Autoloader.setup
 
-module TerraspaceProvider
+module TerraspaceProviderAws
   class Error < StandardError; end
 end

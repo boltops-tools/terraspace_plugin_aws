@@ -1,7 +1,7 @@
-module TerraspaceProvider::Backend
-  class S3
+module TerraspaceProviderAws::Interfaces
+  class Backend
     include Terraspace::Provider::Backend::Interface
-    include TerraspaceProvider::Clients
+    include TerraspaceProviderAws::Clients
 
     def create
       bucket = @info["bucket"]

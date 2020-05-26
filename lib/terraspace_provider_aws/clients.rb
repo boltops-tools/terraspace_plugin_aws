@@ -1,6 +1,6 @@
 require "aws-sdk-s3"
 
-module TerraspaceProvider
+module TerraspaceProviderAws
   module Clients
     extend Memoist
 
