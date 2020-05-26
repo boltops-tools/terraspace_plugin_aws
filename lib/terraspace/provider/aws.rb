@@ -18,3 +18,4 @@ end
 
 # zeitwerk only autoloads from terraspace paths. Must require explicitly.
 require "terraspace/auto/backend/s3"
+require "terraspace/compiler/expander/s3"
