@@ -5,7 +5,7 @@ class TerraspaceProviderAws::Interfaces::Backend
       return unless table # not table provided
 
       if exist?(table)
-        puts "Table already exist: #{table}"
+        # puts "Table already exist: #{table}"
       else
         puts "Creating dynamodb table: #{table}"
         create_table(table)

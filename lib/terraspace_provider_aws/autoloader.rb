@@ -10,15 +10,12 @@ module TerraspaceProviderAws
     end
 
     class << self
-      @@already_setup = false
       def setup
-        return if @@already_setup
         loader = Zeitwerk::Loader.new
         loader.inflector = Inflector.new
         lib = File.expand_path("../", __dir__)
         loader.push_dir(lib)
         loader.setup
-        @@already_setup = true
       end
     end
   end

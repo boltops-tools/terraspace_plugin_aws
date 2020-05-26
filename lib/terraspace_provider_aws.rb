@@ -2,7 +2,7 @@ lib = File.expand_path("../../../", __FILE__)
 $:.unshift(lib)
 
 require "memoist"
-require "terraspace" # for base classes
+require "terraspace" # for interface
 
 require "terraspace_provider_aws/version"
 require "terraspace_provider_aws/autoloader"
@@ -12,4 +12,7 @@ module TerraspaceProviderAws
   class Error < StandardError; end
 end
 
-Terraspace::Provider.register("s3", "aws")
+Terraspace::Provider.register("aws",
+  backend: "s3",
+  root: File.dirname(__dir__)
+)
