@@ -10,7 +10,6 @@ PATH
   specs:
     terraspace (0.1.0)
       activesupport
-      aws-sdk-s3
       aws_data
       dsl_evaluator
       gcp_data
@@ -37,13 +36,6 @@ GEM
       aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.31.0)
-      aws-sdk-core (~> 3, >= 3.71.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.66.0)
-      aws-sdk-core (~> 3, >= 3.96.1)
-      aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.3)
       aws-eventstream (~> 1.0, >= 1.0.2)
     aws_data (0.1.1)

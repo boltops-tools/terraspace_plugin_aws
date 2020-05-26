@@ -10,7 +10,7 @@ class Terraspace::Auto::Backend
         exit 1
       end
       if exist?(bucket)
-        puts "Bucket already exist: #{bucket}"
+        # puts "Bucket already exist: #{bucket}"
       else
         puts "Creating bucket: #{bucket}"
         s3.create_bucket(bucket: bucket)
