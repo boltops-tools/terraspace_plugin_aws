@@ -1,6 +1,6 @@
 require "zeitwerk"
 
-module Terraspace::Provider::Aws
+module TerraspaceProvider
   class Autoloader
     class Inflector < Zeitwerk::Inflector
       def camelize(basename, _abspath)
@@ -15,8 +15,9 @@ module Terraspace::Provider::Aws
         return if @@already_setup
         loader = Zeitwerk::Loader.new
         loader.inflector = Inflector.new
-        lib = File.expand_path("../../../", __dir__)
+        lib = File.expand_path("../", __dir__)
         loader.push_dir(lib)
+        loader.ignore("#{lib}/terraspace_provider_aws.rb")
         loader.setup
         @@already_setup = true
       end

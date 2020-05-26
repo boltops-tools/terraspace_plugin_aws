@@ -1,13 +1,13 @@
-require_relative 'lib/terraspace/provider/aws/version'
+require_relative 'lib/terraspace_provider/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "terraspace-provider-aws"
-  spec.version       = Terraspace::Provider::Aws::VERSION
+  spec.name          = "terraspace_provider_aws"
+  spec.version       = TerraspaceProvider::VERSION
   spec.authors       = ["Tung Nguyen"]
   spec.email         = ["tung@boltops.com"]
 
   spec.summary       = "Terraspace AWS Provider"
-  spec.homepage      = "https://github.com/boltops-tools/terraspace-provider-aws"
+  spec.homepage      = "https://github.com/boltops-tools/terraspace_provider_aws"
   spec.license       = "Apache2.0"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 

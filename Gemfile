@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in terraspace-provider-aws.gemspec
+# Specify your gem's dependencies in gemspec
 gemspec
 
 gem "terraspace", path: "#{ENV['HOME']}/environment/terraspace"

@@ -1,7 +1,6 @@
 require "aws-sdk-s3"
 
-module Terraspace::Provider::Aws
-  # Use AwsServices so it doesnt collide with Aws. It's more work to remember to type ::Aws
+module TerraspaceProvider
   module Clients
     extend Memoist
 

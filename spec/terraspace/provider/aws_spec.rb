@@ -1,6 +1,6 @@
-RSpec.describe Terraspace::Provider::Aws do
+RSpec.describe TerraspaceProvider do
   it "has a version number" do
-    expect(Terraspace::Provider::Aws::VERSION).not_to be nil
+    expect(TerraspaceProvider::VERSION).not_to be nil
   end
 
   it "does something useful" do
