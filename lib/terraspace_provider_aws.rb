@@ -14,5 +14,6 @@ end
 
 Terraspace::Provider.register("aws",
   backend: "s3",
-  root: File.dirname(__dir__)
+  layer_class: TerraspaceProviderAws::Interfaces::Layer, # used for layering
+  root: File.dirname(__dir__),
 )

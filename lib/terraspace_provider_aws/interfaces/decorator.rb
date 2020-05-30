@@ -2,6 +2,7 @@ module TerraspaceProviderAws::Interfaces
   class Decorator
     include Terraspace::Provider::Decorator::Interface
 
+    # interface method
     def call
       klass = decorator_class
 
