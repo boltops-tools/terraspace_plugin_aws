@@ -1,5 +1,7 @@
-class TerraspaceProviderAws::Interfaces::Backend
+class TerraspacePluginAws::Interfaces::Backend
   class Bucket < Base
+    include Secure
+
     def create
       bucket = @info["bucket"]
       unless bucket # not bucket provided
@@ -8,9 +10,12 @@ class TerraspaceProviderAws::Interfaces::Backend
       end
       if exist?(bucket)
         # puts "Bucket already exist: #{bucket}"
+        c = TerraspacePluginAws::Interfaces::Config.instance.config.s3
+        secure(bucket) if c.secure_existing
       else
         puts "Creating bucket: #{bucket}"
         s3.create_bucket(bucket: bucket)
+        secure(bucket)
       end
     end
 

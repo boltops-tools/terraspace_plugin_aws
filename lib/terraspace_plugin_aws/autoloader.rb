@@ -1,6 +1,6 @@
 require "zeitwerk"
 
-module TerraspaceProviderAws
+module TerraspacePluginAws
   class Autoloader
     class Inflector < Zeitwerk::Inflector
       def camelize(basename, _abspath)

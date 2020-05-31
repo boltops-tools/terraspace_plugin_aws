@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "terraspace_provider_aws"
+require "terraspace_plugin_aws"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

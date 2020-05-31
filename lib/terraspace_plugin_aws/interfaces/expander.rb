@@ -1,8 +1,8 @@
 require "aws_data"
 
-module TerraspaceProviderAws::Interfaces
+module TerraspacePluginAws::Interfaces
   class Expander
-    include Terraspace::Provider::Expander::Interface
+    include Terraspace::Plugin::Expander::Interface
     delegate :account, :region, to: :aws_data
 
     def aws_data
