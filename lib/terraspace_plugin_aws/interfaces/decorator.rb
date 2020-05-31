@@ -1,6 +1,6 @@
-module TerraspaceProviderAws::Interfaces
+module TerraspacePluginAws::Interfaces
   class Decorator
-    include Terraspace::Provider::Decorator::Interface
+    include Terraspace::Plugin::Decorator::Interface
 
     # interface method
     def call
@@ -12,8 +12,8 @@ module TerraspaceProviderAws::Interfaces
     end
 
     def decorator_class
-      # IE: TerraspaceProviderAws::Interfaces::Decorator::AwsSecurityGroup
-      klass_name = "TerraspaceProviderAws::Interfaces::Decorator::#{@type.camelize}"
+      # IE: TerraspacePluginAws::Interfaces::Decorator::AwsSecurityGroup
+      klass_name = "TerraspacePluginAws::Interfaces::Decorator::#{@type.camelize}"
       klass_name.constantize
     rescue NameError
     end

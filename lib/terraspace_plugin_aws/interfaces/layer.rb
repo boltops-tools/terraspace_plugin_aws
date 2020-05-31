@@ -1,6 +1,6 @@
 require "aws_data"
 
-module TerraspaceProviderAws::Interfaces
+module TerraspacePluginAws::Interfaces
   class Layer
     extend Memoist
 

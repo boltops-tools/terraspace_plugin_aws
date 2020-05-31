@@ -1,4 +1,4 @@
-class TerraspaceProviderAws::Interfaces::Decorator
+class TerraspacePluginAws::Interfaces::Decorator
   class Base
     def initialize(props={})
       @props = props

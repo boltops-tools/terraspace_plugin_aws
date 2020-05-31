@@ -1,4 +1,4 @@
-class TerraspaceProviderAws::Interfaces::Decorator
+class TerraspacePluginAws::Interfaces::Decorator
   class AwsSecurityGroup < Base
     def call
       ingress = @props[:ingress]

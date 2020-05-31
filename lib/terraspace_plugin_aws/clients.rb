@@ -1,7 +1,7 @@
 require "aws-sdk-dynamodb"
 require "aws-sdk-s3"
 
-module TerraspaceProviderAws
+module TerraspacePluginAws
   module Clients
     extend Memoist
 

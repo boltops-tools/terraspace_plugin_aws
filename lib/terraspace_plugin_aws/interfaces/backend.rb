@@ -1,6 +1,6 @@
-module TerraspaceProviderAws::Interfaces
+module TerraspacePluginAws::Interfaces
   class Backend
-    include Terraspace::Provider::Backend::Interface
+    include Terraspace::Plugin::Backend::Interface
 
     # interface method
     def call
