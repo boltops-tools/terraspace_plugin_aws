@@ -1,6 +1,3 @@
-lib = File.expand_path("../../../", __FILE__)
-$:.unshift(lib)
-
 require "memoist"
 require "terraspace" # for interface
 
