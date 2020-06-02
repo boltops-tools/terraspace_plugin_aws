@@ -22,7 +22,7 @@ end
 
 Terraspace::Plugin.register("aws",
   backend: "s3",
-  config_instance: TerraspacePluginAws::Interfaces::Config.instance,
+  config_class: TerraspacePluginAws::Interfaces::Config,
   layer_class: TerraspacePluginAws::Interfaces::Layer, # used for layering
   root: File.dirname(__dir__),
 )
