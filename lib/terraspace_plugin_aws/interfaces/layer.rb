@@ -5,13 +5,13 @@ module TerraspacePluginAws::Interfaces
     extend Memoist
 
     # interface method
-    def region
-      aws_data.region
+    def namespace
+      aws_data.account
     end
 
     # interface method
-    def account
-      aws_data.account
+    def region
+      aws_data.region
     end
 
     # interface method
