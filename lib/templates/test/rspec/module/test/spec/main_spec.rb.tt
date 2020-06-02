@@ -1,7 +1,7 @@
 # This starter example of a spec that creates a test harness and provisions a real s3 bucket.
 # The test harness will be created at:
 #
-#    /tmp/terraspace-test-harnesses/<%= @name %>
+#    /tmp/terraspace-test-harnesses/<%= @name %>-harness
 #
 # It's recommended to run this on a test AWS account.
 #
@@ -9,7 +9,7 @@ describe "main" do
   before(:all) do
     mod_path = File.expand_path("../..", __dir__)
     terraspace.build_test_harness(
-      name: "<%= @name %>",
+      name: "<%= @name %>-harness",
       modules: {example: mod_path},
       stacks:  {example: "#{mod_path}/test/spec/fixtures/stack"},
     )
