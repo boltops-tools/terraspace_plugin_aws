@@ -3,10 +3,13 @@ module TerraspacePluginAws::Interfaces
     include Terraspace::Plugin::Config::Interface
     include Singleton
 
+    # interface method
+    # load_project_config: config/plugins/aws.rb
     def provider
       "aws"
     end
 
+    # interface method
     def defaults
       c = ActiveSupport::OrderedOptions.new
       c.s3 = ActiveSupport::OrderedOptions.new
