@@ -5,16 +5,16 @@ class TerraspacePluginAws::Interfaces::Backend
       return unless table # not table provided
 
       if exist?(table)
-        # puts "Table already exist: #{table}"
+        logger.debug "Table already exist: #{table}"
       else
-        puts "Creating dynamodb table: #{table}"
+        logger.info "Creating dynamodb table: #{table}"
         create_table(table)
       end
     end
 
     def create_table(name)
       dynamodb.create_table(table_definition(name))
-      puts "Waiting for dynamodb table to finish creating..."
+      logger.info "Waiting for dynamodb table to finish creating..."
       dynamodb.wait_until(:table_exists, table_name: name)
     end
 

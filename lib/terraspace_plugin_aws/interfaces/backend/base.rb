@@ -7,5 +7,9 @@ class TerraspacePluginAws::Interfaces::Backend
     def initialize(info)
       @info = info
     end
+
+    def logger
+      Terraspace.logger
+    end
   end
 end
