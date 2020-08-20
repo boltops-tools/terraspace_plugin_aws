@@ -2,6 +2,7 @@ require "aws_data"
 
 module TerraspacePluginAws::Interfaces
   class Layer
+    include Terraspace::Plugin::Layer::Interface
     extend Memoist
 
     # interface method
@@ -12,11 +13,6 @@ module TerraspacePluginAws::Interfaces
     # interface method
     def region
       aws_data.region
-    end
-
-    # interface method
-    def provider
-      "aws"
     end
 
     def aws_data
