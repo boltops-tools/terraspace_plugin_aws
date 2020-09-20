@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.2.2]
+- #4 default access logging to false
+- set prefix to @folder for performance improvement
+
 ## [0.2.1]
 - #3 quiet s3-secure messages
 
