@@ -5,7 +5,7 @@ module TerraspacePluginAws::Interfaces
 
     # interface method
     def download
-      resp = s3.list_objects(bucket: @bucket)
+      resp = s3.list_objects(bucket: @bucket, prefix: @folder)
       resp.contents.each do |content|
         local_path = "#{@dest}/#{content.key}"
         FileUtils.mkdir_p(File.dirname(local_path))
