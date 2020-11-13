@@ -22,12 +22,22 @@ module TerraspacePluginAws
     Interfaces::Config.instance.config
   end
 
+  @@logger = nil
+  def logger
+    @@logger ||= Terraspace.logger
+  end
+
+  def logger=(v)
+    @@logger = v
+  end
+
   extend self
 end
 
 Terraspace::Plugin.register("aws",
   backend: "s3",
   config_class: TerraspacePluginAws::Interfaces::Config,
-  layer_class: TerraspacePluginAws::Interfaces::Layer, # used for layering
+  helper_class: TerraspacePluginAws::Interfaces::Helper,
+  layer_class: TerraspacePluginAws::Interfaces::Layer,
   root: File.dirname(__dir__),
 )
