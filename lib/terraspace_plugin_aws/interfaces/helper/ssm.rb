@@ -1,15 +1,5 @@
-require "base64"
-
 module TerraspacePluginAws::Interfaces::Helper
-  class SSM
-    include TerraspacePluginAws::Clients
-    include TerraspacePluginAws::Logging
-
-    def initialize(options={})
-      @options = options
-      @base64 = options[:base64]
-    end
-
+  class SSM < SecretBase
     def fetch(name)
       value = fetch_value(name)
       value = Base64.strict_encode64(value).strip if @base64
