@@ -4,7 +4,7 @@ module TerraspacePluginAws
   class Autoloader
     class Inflector < Zeitwerk::Inflector
       def camelize(basename, _abspath)
-        map = { cli: "CLI", version: "VERSION" }
+        map = { cli: "CLI", ssm: "SSM", version: "VERSION" }
         map[basename.to_sym] || super
       end
     end
