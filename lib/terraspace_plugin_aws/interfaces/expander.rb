@@ -10,5 +10,9 @@ module TerraspacePluginAws::Interfaces
     def aws_data
       $__aws_data ||= AwsData.new
     end
+
+    def expand_string?(string)
+      !string.include?("arn:")
+    end
   end
 end
