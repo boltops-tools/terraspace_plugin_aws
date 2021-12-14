@@ -6,6 +6,7 @@ require "aws-sdk-ssm"
 module TerraspacePluginAws
   module Clients
     extend Memoist
+    include Options
 
     def s3
       Aws::S3::Client.new(client_options)
@@ -26,14 +27,5 @@ module TerraspacePluginAws
       Aws::DynamoDB::Client.new(client_options)
     end
     memoize :dynamodb
-
-    # Typically inferred from AWS_REGION unless set in the backend.tf
-    def client_options
-      if @info['region']
-        {region: @info['region']}
-      else
-        {}
-      end
-    end
   end
 end
