@@ -3,7 +3,7 @@ module TerraspacePluginAws::Clients
   private
     def client_options
       if @info['role_arn']
-        client_assume_role_config
+        client_assume_role_options
       else
         client_default_options
       end
@@ -31,7 +31,7 @@ module TerraspacePluginAws::Clients
     #     :external_id (String)
     #     :client (STS::Client)
     #
-    def client_assume_role_config
+    def client_assume_role_options
       whitelist = %w[
         assume_role_duration_seconds
         assume_role_policy
@@ -59,10 +59,7 @@ module TerraspacePluginAws::Clients
       end
       assume_role_config.symbolize_keys! # ruby sdk expects symbols for keys
       assume_role_config[:role_session_name] ||= [ENV['C9_USER'] || ENV['USER'], 'session'].compact.join('-') # session name is required for the ruby sdk
-      # options = {client: Aws::STS::Client.new(client_region_option)}
-      options = {}
-      options.merge!(assume_role_config)
-      role_credentials = Aws::AssumeRoleCredentials.new(options)
+      role_credentials = Aws::AssumeRoleCredentials.new(assume_role_config)
       {credentials: role_credentials}
     end
 
