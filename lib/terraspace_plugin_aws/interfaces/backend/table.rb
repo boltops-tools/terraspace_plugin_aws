@@ -6,6 +6,8 @@ class TerraspacePluginAws::Interfaces::Backend
 
       if exist?(table)
         logger.debug "Table already exist: #{table}"
+        c = TerraspacePluginAws::Interfaces::Config.instance.config
+        tag_existing(table) if c.tag_existing
       else
         logger.info "Creating dynamodb table: #{table}"
         create_table(table)
@@ -36,6 +38,7 @@ class TerraspacePluginAws::Interfaces::Backend
         table_name: name,
       }
       secure(definition)
+      tag(definition)
       definition
     end
 
@@ -62,6 +65,29 @@ class TerraspacePluginAws::Interfaces::Backend
 
       definition[:sse_specification] = spec
       definition
+    end
+
+    def tag(definition)
+      definition[:tags] = tags unless tags.empty?
+    end
+
+    def tag_existing(table_name)
+      return if tags.empty?
+      resp = dynamodb.describe_table(table_name: table_name)
+      # Always appends tags, wont remove tags.
+      dynamodb.tag_resource(
+        resource_arn: resp.table.table_arn,
+        tags: tags
+      )
+    end
+
+    def tags
+      c = TerraspacePluginAws::Interfaces::Config.instance.config
+      tags = !c.dynamodb.tags.empty? ? c.dynamodb.tags : c.tags
+      # Note there is no map! method for Hash
+      tags = tags.map do |k,v|
+        {key: k.to_s, value: v}
+      end
     end
 
     def exist?(name)
