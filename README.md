@@ -12,6 +12,8 @@ gem 'terraspace_plugin_aws'
 
 ## Configure
 
+Terraspace Docs: [AWS Terraspace Plugin](https://terraspace.cloud/docs/plugins/aws/)
+
 Optionally configure the plugin. Here's an example `aws.rb` for your terraspace project.
 
 config/plugins/aws.rb
