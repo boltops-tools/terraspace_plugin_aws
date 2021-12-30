@@ -23,6 +23,11 @@ module TerraspacePluginAws
     end
     memoize :ssm
 
+    def sts
+      Aws::STS::Client.new(client_options)
+    end
+    memoize :sts
+
     def dynamodb
       Aws::DynamoDB::Client.new(client_options)
     end
