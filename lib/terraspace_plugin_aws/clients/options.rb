@@ -2,6 +2,7 @@ module TerraspacePluginAws::Clients
   module Options
   private
     def client_options
+      return {} unless @info # aws_secret helper wont have @info
       if @info['role_arn']
         client_assume_role_options
       else
