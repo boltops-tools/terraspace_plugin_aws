@@ -31,6 +31,7 @@ class TerraspacePluginAws::Interfaces::Backend::Bucket
       S3Secure::Versioning::Enable.new(options).run if c.versioning
       S3Secure::Lifecycle::Add.new(options).run if c.lifecycle
       S3Secure::AccessLogs::Enable.new(options).run if c.access_logging
+      S3Secure::PublicAccess::Block.new(options).run if c.block_public_access
     rescue Aws::S3::Errors::AccessDenied => e
       @@retries += 1
       retry unless @@retries > 1
