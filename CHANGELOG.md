@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.3.4] - 2021-12-30
+- [#13](https://github.com/boltops-tools/terraspace_plugin_aws/pull/13) check aws setup and provide friendly message
+- [#14](https://github.com/boltops-tools/terraspace_plugin_aws/pull/14) fix aws_secret helper
+
 ## [0.3.3] - 2021-12-14
 - [#10](https://github.com/boltops-tools/terraspace_plugin_aws/pull/10) implement expand_string? to not expand aws arn values
 
