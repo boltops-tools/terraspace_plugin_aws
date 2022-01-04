@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.3.6] - 2022-01-04
+- [#17](https://github.com/boltops-tools/terraspace_plugin_aws/pull/17) aws_secret and aws_ssm: support expansion automatically
+
 ## [0.3.5] - 2021-12-30
 - [#15](https://github.com/boltops-tools/terraspace_plugin_aws/pull/15) block public access support
 - [#16](https://github.com/boltops-tools/terraspace_plugin_aws/pull/16) tagging support for s3 bucket and dynamodb table
