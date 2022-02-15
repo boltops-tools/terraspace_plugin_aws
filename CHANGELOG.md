@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.3.7] - 2022-02-15
+- [#18](https://github.com/boltops-tools/terraspace_plugin_aws/pull/18) update starter s3 bucket example to work with terraform aws provider v4
+
 ## [0.3.6] - 2022-01-04
 - [#17](https://github.com/boltops-tools/terraspace_plugin_aws/pull/17) aws_secret and aws_ssm: support expansion automatically
 
