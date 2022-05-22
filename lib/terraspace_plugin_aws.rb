@@ -39,5 +39,6 @@ Terraspace::Plugin.register("aws",
   config_class: TerraspacePluginAws::Interfaces::Config,
   helper_class: TerraspacePluginAws::Interfaces::Helper,
   layer_class: TerraspacePluginAws::Interfaces::Layer,
+  ci_class: TerraspacePluginAws::Interfaces::Ci,
   root: File.dirname(__dir__),
 )
