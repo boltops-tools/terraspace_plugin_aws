@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.3.8] - 2022-06-09
+- [#19](https://github.com/boltops-tools/terraspace_plugin_aws/pull/19) fix bucket tagging: use parsed region from backend.tf for s3 client
+
 ## [0.3.7] - 2022-02-15
 - [#18](https://github.com/boltops-tools/terraspace_plugin_aws/pull/18) update starter s3 bucket example to work with terraform aws provider v4
 
