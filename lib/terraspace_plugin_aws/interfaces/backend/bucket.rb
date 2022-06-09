@@ -34,7 +34,7 @@ class TerraspacePluginAws::Interfaces::Backend
     end
 
     def tag(bucket)
-      Tagging.new(@info["bucket"]).tag
+      Tagging.new(@info).tag
     end
   end
 end
