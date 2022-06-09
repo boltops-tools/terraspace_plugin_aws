@@ -1,10 +1,8 @@
 class TerraspacePluginAws::Interfaces::Backend::Bucket
-  class Tagging
-    include TerraspacePluginAws::Clients
-    include TerraspacePluginAws::Logging
-
-    def initialize(bucket)
-      @bucket = bucket
+  class Tagging < TerraspacePluginAws::Interfaces::Backend::Base
+    def initialize(info)
+      super
+      @bucket = info['bucket']
     end
 
     def tag
