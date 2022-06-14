@@ -1,6 +1,6 @@
 backend("s3",
   bucket:         "terraform-state-:ACCOUNT-:REGION-:ENV",
-  key:            ":TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate",
+  key:            ":PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate",
   region:         ":REGION",
   encrypt:        true,
   dynamodb_table: "terraform_locks"
