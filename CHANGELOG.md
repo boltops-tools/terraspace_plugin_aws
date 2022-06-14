@@ -3,8 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.4.1] - 2022-06-14
+- [#21](https://github.com/boltops-tools/terraspace_plugin_aws/pull/21) backend.tf template: add project variable
+
 ## [0.4.0] - 2022-06-10
-- [#20](https://github.com/boltops-tools/terraspace_plugin_aws/pull/20) Update Generated Default Backend Key and CI Interface 
+- [#20](https://github.com/boltops-tools/terraspace_plugin_aws/pull/20) Update Generated Default Backend Key and CI Interface
 - add ci interface class
 - change default backend key
 
