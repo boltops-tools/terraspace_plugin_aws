@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.4.2] - 2022-07-13
+- [#22](https://github.com/boltops-tools/terraspace_plugin_aws/pull/22) add backend config variables docs comment
+
 ## [0.4.1] - 2022-06-14
 - [#21](https://github.com/boltops-tools/terraspace_plugin_aws/pull/21) backend.tf template: add project variable
 
