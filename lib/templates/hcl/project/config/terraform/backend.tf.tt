@@ -1,3 +1,5 @@
+# Backend Config Variables Docs
+# https://terraspace.cloud/docs/config/backend/variables/
 terraform {
   backend "s3" {
     bucket         = "<%%= expansion('terraform-state-:ACCOUNT-:REGION-:ENV') %>"
