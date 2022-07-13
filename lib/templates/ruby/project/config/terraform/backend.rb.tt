@@ -1,3 +1,5 @@
+# Backend Config Variables Docs
+# https://terraspace.cloud/docs/config/backend/variables/
 backend("s3",
   bucket:         "terraform-state-:ACCOUNT-:REGION-:ENV",
   key:            ":PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate",
