@@ -35,7 +35,7 @@ module TerraspacePluginAws::Interfaces
       options = names.extract_options!
       ec2 = aws_ec2(options) # client
       resp = ec2.describe_subnets(filters: [{ name: "tag:Name", values: names }])
-      resp.subnets.map(&:subnet_id).sort.to_json
+      resp.subnets.map(&:subnet_id).sort
     end
     memoize :aws_subnet_ids
   end
