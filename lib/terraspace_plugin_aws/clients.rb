@@ -9,8 +9,8 @@ module TerraspacePluginAws
     extend Memoist
     include Options
 
-    def ec2
-      Aws::EC2::Client.new(client_options)
+    def ec2(options={})
+      Aws::EC2::Client.new(client_options.merge(options))
     end
     memoize :ec2
 
