@@ -1,4 +1,5 @@
 require "aws-sdk-dynamodb"
+require "aws-sdk-ec2"
 require "aws-sdk-s3"
 require "aws-sdk-secretsmanager"
 require "aws-sdk-ssm"
@@ -7,6 +8,11 @@ module TerraspacePluginAws
   module Clients
     extend Memoist
     include Options
+
+    def ec2
+      Aws::EC2::Client.new(client_options)
+    end
+    memoize :ec2
 
     def s3
       Aws::S3::Client.new(client_options)

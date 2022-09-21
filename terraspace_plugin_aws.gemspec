@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "aws-sdk-dynamodb"
+  spec.add_dependency "aws-sdk-ec2"
   spec.add_dependency "aws-sdk-s3"
   spec.add_dependency "aws-sdk-secretsmanager"
   spec.add_dependency "aws-sdk-ssm"
