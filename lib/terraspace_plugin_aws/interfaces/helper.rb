@@ -17,13 +17,21 @@ module TerraspacePluginAws::Interfaces
       Ec2.new.client(options)
     end
 
-    def aws_vpc_id(name, **options)
+    def aws_key_pairs(regexp=nil, options={})
+      ec2 = aws_ec2(options) # client
+      resp = ec2.describe_key_pairs
+      key_names = resp.key_pairs.map(&:key_name)
+      key_names.select! { |k| k =~ regexp } if regexp
+      key_names
+    end
+
+    def aws_vpc_id(name, options={})
       vpc = aws_vpc(name, options)
       vpc.vpc_id if vpc
     end
     memoize :aws_vpc_id
 
-    def aws_vpc(name, **options)
+    def aws_vpc(name, options={})
       ec2 = aws_ec2(options) # client
       resp = ec2.describe_vpcs(filters: [{ name: "tag:Name", values: [name] }])
       resp.vpcs.first
