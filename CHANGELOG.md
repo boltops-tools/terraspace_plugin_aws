@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.5.1] - 2023-03-27
+- [#24](https://github.com/boltops-tools/terraspace_plugin_aws/pull/24) Remove redundant backend `encrypt` configuration
+
 ## [0.5.0] - 2022-07-20
 - [#23](https://github.com/boltops-tools/terraspace_plugin_aws/pull/23) update backend key generated default
 
