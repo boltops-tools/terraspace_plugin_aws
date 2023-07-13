@@ -28,6 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "aws-sdk-ssm"
   spec.add_dependency "aws_data"
   spec.add_dependency "memoist"
-  spec.add_dependency "s3-secure", "~> 0.6.1"
+  spec.add_dependency "s3-secure", ">= 0.7.0"
   spec.add_dependency "zeitwerk"
 end
