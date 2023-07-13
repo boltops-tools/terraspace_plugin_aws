@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project *loosely tries* to adhere to [Semantic Versioning](http://semver.org/).
 
+## [0.6.1] - 2023-07-13
+- [#26](https://github.com/boltops-tools/terraspace_plugin_aws/pull/26) update and loosen s3-secure dependency
+
 ## [0.6.0] - 2023-06-07
 - [#25](https://github.com/boltops-tools/terraspace_plugin_aws/pull/25) fix starter example, use tags as example instead
 
